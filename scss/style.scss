@@ -29,6 +29,10 @@ body {
 	@include title;
 }
 
+.section-subtitle {
+	@include subtitle;
+}
+
 .main {
 	padding-top: 206px;
 	@include breakpoint(lg) {
@@ -57,4 +61,5 @@ body {
 @import "./section/technologies";
 @import "./section/stages";
 @import "./section/form";
+@import "./section/pos";
 @import "media";

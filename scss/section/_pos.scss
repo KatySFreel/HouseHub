@@ -1,0 +1,137 @@
+.pos {
+	padding-top: 77px;
+	padding-bottom: 64px;
+	@include breakpoint(lg) {
+		padding-top: 143px;
+		padding-bottom: 39px;
+	}
+
+	&__title {
+		width: 100%;
+		max-width: 407px;	}
+
+	&__list {
+		margin-top: 73px;
+		background: url(/img/pos/bg.png);
+		background-repeat: no-repeat;
+		display: grid;
+		align-items: stretch;
+		grid-template-columns: repeat(3, 1fr);
+		padding-left: 92px;
+		padding-top: 66px;
+		gap: 40px;
+		justify-content: space-between;
+		@include breakpoint(lg) {
+			grid-template-columns: repeat(2,1fr);
+			padding-left: 25px;
+			padding-top: 12px;
+			background-size: contain;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 262px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include breakpoint(md) {
+			flex-direction: column-reverse;
+			justify-content: space-between;
+		}
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 151.5%;
+		@include breakpoint(md) {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 120%;
+			margin-top: 18px;
+			text-align: center;
+		}
+	}
+
+	&__img {
+		@include breakpoint(lg) {
+			width: 100%;
+			max-width: 168px;
+			height: 100%;
+			max-height: 133px;
+			&:nth-child(3) {
+				transform: translateY(-50%);
+			}
+		}
+		
+	}
+}
+
+.level {
+	margin-top: 100px;
+	&__title {
+		margin-bottom: 56px;
+		@include breakpoint(lg) {
+			margin-bottom: 25px;
+		}
+	}
+	&__menu {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		gap: 20px;
+		@include breakpoint (md) {
+			flex-direction: column;
+			align-items: center;
+			gap: 25px;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 386px;
+		padding: 51px 32px;
+		background: $green-light;
+		border-radius: 13px;
+		color: $write;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 17px;
+		&:nth-child(1) .level__item-title {
+			width: 122px;
+			@include breakpoint(md) {
+				width: 100%;
+			}
+		}
+		@include breakpoint (lg) {
+			padding: 36px 26px;
+			gap: 13px;
+		}
+	}
+
+	&__item-title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: center;
+		width: 100%;
+		max-width: 320px;
+		@include breakpoint(lg) {
+			font-size: 20px;
+			line-height: 120%;
+			max-width: 100%;
+		}
+	}
+
+	&__item-text {
+		width: 100%;
+		max-width: 320px;
+		text-align: center;
+		@include breakpoint(lg) {
+			font-size: 14px;
+			line-height: 120%;
+		}
+	}
+}

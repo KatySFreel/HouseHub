@@ -2,19 +2,9 @@
 	margin-top: 99px;
 
 	&__title {
-		text-align: center;
-		color: $green;
-		font-weight: 700;
-		font-size: 35px;
-		line-height: 50px;
-		width: 100%;
 		max-width: 700px;
-		display: block;
 		margin: 0 auto 39px;
 		@include breakpoint(md) {
-			font-weight: 700;
-			font-size: 27px;
-			line-height: 120%;
 			margin-bottom: 25px;
 		}
 	}
