@@ -1,0 +1,103 @@
+.stages {
+	padding-top: 65px;
+	padding-bottom: 50px;
+	@include breakpoint(md) {
+		padding-top: 26px;
+		padding-bottom: 55px;
+	}
+
+	&__menu {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(3,1fr);
+		align-items: end;
+		@include breakpoint(md) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 50px;
+			margin-top: 55px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		@include breakpoint(md) {
+			flex-direction: column;
+		}
+		&:nth-child(2n) {
+			transform: translateY(100px);
+			justify-content: flex-end;
+			@include breakpoint(md) {
+				transform: translateY(0px);
+			}
+		}
+		&:nth-child(1) {
+			.text {
+				width: 255px;
+			}
+		}
+		&:nth-child(2) {
+			.text {
+				width: 277px;
+			}
+		}
+		&:nth-child(3) {
+			.text {
+				width: 152px;
+			}
+		}
+		&:nth-child(4) {
+			.text {
+				width: 105px;
+			}
+		}
+		&:nth-child(5) {
+			.text {
+				width: 150px;
+			}
+		}
+		&:nth-child(6) {
+			.text {
+				width: 165px;
+			}
+		}
+		img {
+			@include breakpoint(lg) {
+				width: 100%;
+				max-width: 232px;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__text {
+		width: 100%;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.number {
+		color: $green;
+		font-size: 96px;
+		line-height: 115px;
+		font-weight: 900;
+		@include breakpoint(lg) {
+			font-size: 80px;
+			line-height: 48px;
+			display: block;
+		}
+		@include breakpoint(md) {
+			font-size: 40px;
+			line-height: 48px;
+			display: block;
+			margin-left: 50%;
+		}
+	}
+	
+}

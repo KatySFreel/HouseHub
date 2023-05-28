@@ -1222,10 +1222,12 @@ body {
 
 .technologies {
   padding-top: 91px;
+  padding-bottom: 65px;
 }
 @media (max-width: 767px) {
   .technologies {
     padding-top: 49px;
+    padding-bottom: 26px;
   }
 }
 .technologies__title {
@@ -1296,6 +1298,106 @@ body {
 @media (max-width: 767px) {
   .technologies__img {
     transform: rotate(7.65deg);
+  }
+}
+
+.stages {
+  padding-top: 65px;
+  padding-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .stages {
+    padding-top: 26px;
+    padding-bottom: 55px;
+  }
+}
+.stages__menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: end;
+}
+@media (max-width: 767px) {
+  .stages__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 55px;
+  }
+}
+.stages__item {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .stages__item {
+    flex-direction: column;
+  }
+}
+.stages__item:nth-child(2n) {
+  transform: translateY(100px);
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .stages__item:nth-child(2n) {
+    transform: translateY(0px);
+  }
+}
+.stages__item:nth-child(1) .text {
+  width: 255px;
+}
+.stages__item:nth-child(2) .text {
+  width: 277px;
+}
+.stages__item:nth-child(3) .text {
+  width: 152px;
+}
+.stages__item:nth-child(4) .text {
+  width: 105px;
+}
+.stages__item:nth-child(5) .text {
+  width: 150px;
+}
+.stages__item:nth-child(6) .text {
+  width: 165px;
+}
+@media (max-width: 992px) {
+  .stages__item img {
+    width: 100%;
+    max-width: 232px;
+  }
+}
+.stages__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stages__text {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.stages .number {
+  color: #005A4D;
+  font-size: 96px;
+  line-height: 115px;
+  font-weight: 900;
+}
+@media (max-width: 992px) {
+  .stages .number {
+    font-size: 80px;
+    line-height: 48px;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .stages .number {
+    font-size: 40px;
+    line-height: 48px;
+    display: block;
+    margin-left: 50%;
   }
 }
 
