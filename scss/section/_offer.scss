@@ -1,0 +1,196 @@
+.offer {
+	&__inner {
+		background-image: url(../../img/offer/bac.jpg);
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: contain;
+		padding-bottom: 18px;
+		@include breakpoint(lg) {
+			background-size: contain;
+		}
+	}
+
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include breakpoint(lg) {
+				flex-direction: column;
+			}
+		}
+
+		&__title {
+			@include title;
+			width: 100%;
+			max-width: 410px;
+			color: #2D2D2D;
+			margin-bottom: 67px;
+			@include breakpoint(lg) {
+				margin-bottom: 39px;
+				color: $write;				
+				width: 100%;
+				padding: 29px 15px 0px 20px;
+				&::after {
+					bottom: -15px;
+					left: 20px;
+				}
+			}
+			@include breakpoint(xxs) {
+				font-size: 24px;
+			}
+		}
+
+		&__text {
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 120%;
+			color: #676767;
+			width: 100%;
+			max-width: 418px;
+			margin-bottom: 53px;
+			@include breakpoint(lg) {
+				text-align: center;
+				width: 100%;
+				margin-bottom: 35px;
+				margin-top: 17px;
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			max-width: 266px;
+			margin-bottom: 67px;
+			@include breakpoint(lg) {
+				margin: 0 auto;
+			}
+		}
+
+		&__home {
+		}
+
+		&__title-light {
+			color: $green;
+			opacity: 0.1;
+			font-size: 37px;
+			line-height: 44px;
+			text-transform: uppercase;
+			font-weight: 900;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			@include breakpoint(lg) {
+				font-size: 22px;
+				line-height: 26px;
+				text-align: center;
+				justify-content: center;
+			}
+		}
+	}
+.home {
+	position: relative;
+
+		&__btns {
+			position: absolute;
+			display: none;
+
+		}
+
+		&__img {
+			margin-right: 20px;
+			img {
+				width: 100%;				
+			}
+			@include breakpoint (lg) {
+				display: none;
+			}
+		}
+
+		&__img {
+			
+		}
+		&__btn {
+			background: $write;
+			border: 3px solid $green;
+			padding: 13px 15px;
+			border-radius: 38px;
+		}	
+
+		&__img-mob {
+			display: none;
+			img {
+				width: 100%;
+			}
+			@include breakpoint (lg) {
+				display: block;
+				width: 101%;
+			}
+
+		}
+}
+
+.advantages {
+	width: 100%;
+	background: $write;
+	padding: 26px 30px;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin-bottom: 42px;
+	@include breakpoint(lg) {
+		padding: 16px;
+		margin-top: 31px;
+		margin-bottom: 35px;
+	}
+	@include breakpoint(sm) {
+		padding: 10px 5px;
+	}
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 49px;
+		@include breakpoint(md) {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		@include breakpoint(lg) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 10px;
+			width: 40%;
+		}
+		@include breakpoint(sm) {
+			width: 48%;
+		}
+		@include breakpoint(xs) {
+			width: 100%;
+		}
+	}
+	&__item:nth-child(4) {
+		@include breakpoint(md) {
+			order: 3;
+		}
+	}
+	&__item:nth-child(3) {
+		@include breakpoint(md) {
+			order: 4;
+		}
+	}
+
+	&__text {
+		width: 100%;
+		max-width: 200px;
+		color: $title;
+		@include breakpoint(md) {
+			text-align: center;
+			max-width: 171px;
+		}
+	}
+}
+

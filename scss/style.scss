@@ -1,0 +1,46 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Roboro Flex', sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+	color: #333333;
+}
+
+.container {
+	width: 100%;
+	max-width: 1230px;
+	padding: 0px 10px;
+	margin: 0 auto;
+}
+
+.btn {
+	@include btn;
+}
+
+.section-title {
+	@include title;
+}
+
+.main {
+	padding-top: 206px;
+	@include breakpoint(lg) {
+		padding-top: calc(206px / 10 * 6)
+	}
+}
+
+
+
+@import "./section/header";
+@import "./section/offer";
+@import "./section/structurally";
+@import "./section/services";
+@import "./section/technologies";
+@import "media";
