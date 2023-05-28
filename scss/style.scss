@@ -36,6 +36,18 @@ body {
 	}
 }
 
+.fancybox__backdrop {
+	background: rgba(24, 24, 27, 0.785);
+}
+
+.fancybox__content {
+	background: none;
+	padding: 0;
+}
+
+.is-compact .fancybox__content>.f-button.is-close-btn {
+	top: -43px;
+}
 
 
 @import "./section/header";
@@ -44,4 +56,5 @@ body {
 @import "./section/services";
 @import "./section/technologies";
 @import "./section/stages";
+@import "./section/form";
 @import "media";

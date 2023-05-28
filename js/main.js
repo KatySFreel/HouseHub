@@ -62,3 +62,10 @@ const line = new Vivus(
 
 
 AOS.init();
+
+
+let btn = document.querySelector(".offer__btn");
+
+btn.addEventListener("click", function () {
+  Fancybox.show([{ src: "#dialog-content", type: "inline" }]);
+})

@@ -539,6 +539,10 @@ body {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transition: all 0.3s ease;
 }
 
 .section-title {
@@ -576,6 +580,19 @@ body {
   .main {
     padding-top: 123.6px;
   }
+}
+
+.fancybox__backdrop {
+  background: rgba(24, 24, 27, 0.785);
+}
+
+.fancybox__content {
+  background: none;
+  padding: 0;
+}
+
+.is-compact .fancybox__content > .f-button.is-close-btn {
+  top: -43px;
 }
 
 .header {
@@ -1303,12 +1320,12 @@ body {
 
 .stages {
   padding-top: 65px;
-  padding-bottom: 50px;
+  padding-bottom: 77px;
 }
 @media (max-width: 767px) {
   .stages {
     padding-top: 26px;
-    padding-bottom: 55px;
+    padding-bottom: 143px;
   }
 }
 .stages__menu {
@@ -1422,6 +1439,174 @@ body {
     display: block;
     margin-left: 50%;
   }
+}
+
+.consultation {
+  margin-top: 99px;
+}
+.consultation__title {
+  text-align: center;
+  color: #005A4D;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 50px;
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto 39px;
+}
+@media (max-width: 767px) {
+  .consultation__title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 120%;
+    margin-bottom: 25px;
+  }
+}
+.consultation__wrapper {
+  position: relative;
+}
+.consultation__wrapper::after {
+  position: absolute;
+  content: url(/img/form/r.png);
+  z-index: -1;
+  top: 0;
+  right: -35px;
+}
+@media (max-width: 767px) {
+  .consultation__wrapper::after {
+    display: none;
+  }
+}
+.consultation__wrapper::before {
+  position: absolute;
+  content: url(/img/form/l.png);
+  z-index: -1;
+  left: -35px;
+}
+@media (max-width: 767px) {
+  .consultation__wrapper::before {
+    content: url(/img/form/l-m.png);
+    top: auto;
+    bottom: -245px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.form {
+  background: #005A4D;
+  padding: 32px;
+  width: 100%;
+  max-width: 633px;
+  margin: 0 auto;
+  box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 767px) {
+  .form {
+    padding: 32px 25px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 426px) {
+  .form {
+    padding: 15px;
+  }
+}
+.form__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 8px;
+  padding: 12px 8px;
+  margin-bottom: 16px;
+}
+.form__item-content {
+  width: 100%;
+}
+.form__item-content label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 12px;
+  display: block;
+  font-weight: 400;
+}
+.form__item-content input::-moz-placeholder {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+  background: #005A4D;
+  width: 100%;
+}
+.form__item-content input, .form__item-content input::placeholder {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+  background: #005A4D;
+  width: 100%;
+}
+.form__text {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 18px;
+}
+.form__btn {
+  width: 100%;
+  max-width: 267px;
+  margin: 0 auto 21px;
+  padding: 10px 20px;
+  background: #ffffff;
+  color: #005A4D;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+.form__btn:hover {
+  box-shadow: rgba(237, 237, 237, 0.4705882353) 3px 6px 10px 0px;
+}
+.form__social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+}
+@media (max-width: 426px) {
+  .form__social {
+    gap: 6px;
+  }
+}
+.form__social-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 426px) {
+  .form__social-link {
+    gap: 3px;
+  }
+}
+.form__social-link span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 151.5%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.form__social-link:hover img, .form__social-link:hover span {
+  opacity: 0.5;
+  transition: all 0.3s ease;
 }
 
 /*  Responsive  */

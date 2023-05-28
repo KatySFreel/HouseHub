@@ -13,8 +13,9 @@
 	<!-- style CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Flex:regular" rel="stylesheet" />
 	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -156,13 +157,13 @@
 								Проектирование и монтаж инженерных систем
 							</h1>
 							<div class="home__img home__img-mob">
-								<img src="/img/offer/home.svg" alt="" class="home__img">
+								<img src="/img/offer/home.svg" alt="">
 							</div>
 							<p class="offer__text">
 								Мы создаем пространства, в которых жизнь проходит на высокой волне: надежно, качественно и с
 								гарантией.
 							</p>
-							<button type="button" class="offer__btn btn">
+							<button data-fancybox data-src="#dialog-content" type="button" class="offer__btn btn">
 								Сделать рассчет
 							</button>
 						</div>
@@ -224,6 +225,61 @@
 					<h2 class="offer__title-light">
 						<span>надежно.</span><span>качественно.</span><span>гарантия.</span>
 					</h2>
+				</div>
+				<div class="consultation" id="dialog-content" style="display:none;">
+					<form action="" class="form">
+						<div class="form__item">
+							<img src="img/form/i-1.svg" alt="">
+							<div class="form__item-content">
+								<label for="name">Ваше имя</label>
+								<input type="text" name="name" placeholder="Введите ваше имя">
+							</div>
+						</div>
+						<div class="form__item">
+							<img src="img/form/i-2.svg" alt="">
+							<div class="form__item-content">
+								<label for="tel">Телефон</label>
+								<input type="tel" class="form__input" name="tel" placeholder="Введите ваш телефон">
+							</div>
+						</div>
+						<div class="form__item">
+							<img src="img/form/i-3.svg" alt="">
+							<div class="form__item-content">
+								<label for="text">Комментарий</label>
+								<input type="text" name="text" placeholder="Какой у Вас вопрос?">
+							</div>
+						</div>
+						<p class="form__text">
+							Нажимая кнопку отправить, вы принимаете условия обработки персональных данных
+						</p>
+						<button type="submit" class="form__btn btn">Отправить</button>
+						<ul class="form__social">
+							<li class="form__social-item">
+								<a href="" class="form__social-link">
+									<img src="img/form/s-3.svg" alt="">
+									<span>
+										WhatsApp
+									</span>
+								</a>
+							</li>
+							<li class="form__social-item">
+								<a href="" class="form__social-link">
+									<img src="img/form/s-2.svg" alt="">
+									<span>
+										Viber
+									</span>
+								</a>
+							</li>
+							<li class="form__social-item">
+								<a href="" class="form__social-link">
+									<img src="img/form/s-1.svg" alt="">
+									<span>
+										Telegram
+									</span>
+								</a>
+							</li>
+						</ul>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -439,16 +495,77 @@
 							</div>
 						</li>
 					</ul>
-					.
+					<div class="consultation">
+						<h3 class="consultation__title">
+							Получите бесплатную консультацию эксперта компании
+						</h3>
+						<div class="consultation__wrapper">
+							<form action="" class="form">
+								<div class="form__item">
+									<img src="img/form/i-1.svg" alt="">
+									<div class="form__item-content">
+										<label for="name">Ваше имя</label>
+										<input type="text" name="name" placeholder="Введите ваше имя">
+									</div>
+								</div>
+								<div class="form__item">
+									<img src="img/form/i-2.svg" alt="">
+									<div class="form__item-content">
+										<label for="tel">Телефон</label>
+										<input type="tel" class="form__input" name="tel" placeholder="Введите ваш телефон">
+									</div>
+								</div>
+								<div class="form__item">
+									<img src="img/form/i-3.svg" alt="">
+									<div class="form__item-content">
+										<label for="text">Комментарий</label>
+										<input type="text" name="text" placeholder="Какой у Вас вопрос?">
+									</div>
+								</div>
+								<p class="form__text">
+									Нажимая кнопку отправить, вы принимаете условия обработки персональных данных
+								</p>
+								<button type="submit" class="form__btn btn">Отправить</button>
+								<ul class="form__social">
+									<li class="form__social-item">
+										<a href="" class="form__social-link">
+											<img src="img/form/s-3.svg" alt="">
+											<span>
+												WhatsApp
+											</span>
+										</a>
+									</li>
+									<li class="form__social-item">
+										<a href="" class="form__social-link">
+											<img src="img/form/s-2.svg" alt="">
+											<span>
+												Viber
+											</span>
+										</a>
+									</li>
+									<li class="form__social-item">
+										<a href="" class="form__social-link">
+											<img src="img/form/s-1.svg" alt="">
+											<span>
+												Telegram
+											</span>
+										</a>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+		
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="
 	https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js
 	"></script>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

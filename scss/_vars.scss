@@ -19,6 +19,10 @@ $title: #2D2D2D;
 	font-size: 18px;
 	line-height: 22px;
 	letter-spacing: 0.02em;
+	transition: all .3s ease;
+	&:hover {
+		transition: all .3s ease;
+	}
 }
 
 @mixin title {

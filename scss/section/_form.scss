@@ -1,0 +1,152 @@
+.consultation {
+	margin-top: 99px;
+
+	&__title {
+		text-align: center;
+		color: $green;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 50px;
+		width: 100%;
+		max-width: 700px;
+		display: block;
+		margin: 0 auto 39px;
+		@include breakpoint(md) {
+			font-weight: 700;
+			font-size: 27px;
+			line-height: 120%;
+			margin-bottom: 25px;
+		}
+	}
+	&__wrapper {
+		position: relative;
+		&::after {
+			position: absolute;
+			content: url(/img/form/r.png);
+			z-index: -1;
+			top: 0;
+			right: -35px;
+			@include breakpoint (md) {
+				display: none;
+			} 
+		}
+		&::before {
+			position: absolute;
+			content: url(/img/form/l.png);
+			z-index: -1;
+			left: -35px;
+			@include breakpoint (md) {
+				content: url(/img/form/l-m.png);
+				top: auto;
+				bottom: -245px;
+				left: 50%;
+				transform: translate(-50%);
+			}
+		}
+	}
+}
+.form {
+	background: $green;
+	padding: 32px;
+	width: 100%;
+	max-width: 633px;
+	margin: 0 auto;
+	box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.16);
+	border-radius: 16px;
+	position: relative;
+	z-index: 10;
+	@include breakpoint(md) {
+		padding: 32px 25px;
+		max-width: 100%;
+	}
+	@include breakpoint(xs) {
+		padding: 15px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		border: 1px solid rgba(255, 255, 255, 0.48);
+		border-radius: 8px;
+		padding: 12px 8px;
+		margin-bottom: 16px;
+	}
+
+	&__item-content {
+		width: 100%;
+		label {
+			color: rgba(255, 255, 255, 0.72);
+			font-size: 12px;
+			line-height: 12px;
+			display: block;
+			font-weight: 400;
+		}
+		input, input::placeholder {
+			display: block;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 400;
+			color: rgba(255, 255, 255, 0.72);
+			background: $green;
+			width: 100%;
+		}
+	}
+
+	&__text {
+		margin-top: 6px;
+		color: rgba(255, 255, 255, 0.72);
+		text-align: center;
+		font-size: 12px;
+		line-height: 12px;
+		margin-bottom: 18px;
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 267px;
+		margin: 0 auto 21px;
+		padding: 10px 20px;
+		background: $write;
+		color: $green;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 28px;
+		&:hover {
+			box-shadow:#ededed78 3px 6px 10px 0px;
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		justify-content: center;
+		@include breakpoint(xs) {
+			gap: 6px;
+		}
+	}
+
+	&__social-link {
+		display: flex;
+		align-items: center;
+		gap: 13px;
+		transition: all .3s ease;
+		@include breakpoint(xs) {
+			gap: 3px;
+		}
+		span {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 151.5%;
+			color: $write;
+			transition: all .3s ease;
+		}
+		&:hover {
+			img, span {
+				opacity: .5;
+				transition: all .3s ease;
+			}
+		}
+	}
+}
