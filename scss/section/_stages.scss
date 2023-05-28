@@ -8,9 +8,26 @@
 
 	&__menu {
 		display: grid;
-		grid-template-columns: repeat(2,1fr);
-		grid-template-rows: repeat(3,1fr);
-		align-items: end;
+		grid-template-areas: 
+			"a ."
+			"a b"
+			"a b"
+			"a b"
+			"c b"
+			"c d"
+			"c d"
+			"c d"
+			"e d"
+			"e d"
+			"e f"
+			"e f"
+			"e f"
+			". f";
+		gap: 60px;
+		height: 100%;
+		@include breakpoint(lg) {
+			gap: 30px;
+		}
 		@include breakpoint(md) {
 			display: flex;
 			flex-direction: column;
@@ -27,44 +44,50 @@
 			flex-direction: column;
 		}
 		&:nth-child(2n) {
-			transform: translateY(100px);
 			justify-content: flex-end;
-			@include breakpoint(md) {
-				transform: translateY(0px);
-			}
 		}
 		&:nth-child(1) {
+			grid-area: a;
 			.text {
 				width: 255px;
 			}
 		}
 		&:nth-child(2) {
+			grid-area: b;
 			.text {
 				width: 277px;
 			}
 		}
 		&:nth-child(3) {
+			grid-area: c;
 			.text {
 				width: 152px;
 			}
 		}
 		&:nth-child(4) {
+			grid-area: d;
 			.text {
 				width: 105px;
 			}
 		}
 		&:nth-child(5) {
+			grid-area: e;
 			.text {
 				width: 150px;
 			}
 		}
 		&:nth-child(6) {
+			grid-area: f;
 			.text {
 				width: 165px;
 			}
 		}
 		img {
 			@include breakpoint(lg) {
+				width: 100%;
+				max-width: 200px;
+			}
+			@include breakpoint(md) {
 				width: 100%;
 				max-width: 232px;
 			}
@@ -88,7 +111,7 @@
 		line-height: 115px;
 		font-weight: 900;
 		@include breakpoint(lg) {
-			font-size: 80px;
+			font-size: 70px;
 			line-height: 48px;
 			display: block;
 		}
