@@ -13,6 +13,9 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
+var mixer = mixitup(".spec__content");
+mixer.filter('.category-el');
+
 // burger
 
 function burgerMenu(selector) {
@@ -69,3 +72,4 @@ let btn = document.querySelector(".offer__btn");
 btn.addEventListener("click", function () {
   Fancybox.show([{ src: "#dialog-content", type: "inline" }]);
 })
+

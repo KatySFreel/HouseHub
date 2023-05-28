@@ -1,0 +1,126 @@
+.specialists {
+	padding-top: 64px;
+	@include breakpoint (lg) {
+		padding-top: 39px;
+	}
+}
+.spec {
+
+		&__title {
+			margin-bottom: 96px;
+			@include breakpoint (md) {
+				margin-bottom: 71px;	
+				font-size: 21px;
+				line-height: 120%;
+			}
+ 		}
+
+		&__btns {
+			display: flex;
+			align-items: center;
+			gap: 43px;
+			justify-content: center;
+			@include breakpoint (md) {
+				padding: 10px;
+				overflow-x: scroll;
+				justify-content: flex-start;
+			}
+		}
+
+		&__btn {
+			font-size: 16px;
+			line-height: 19px;
+			color: $btn;
+			background: none;
+			position: relative;
+			white-space: nowrap;
+			transform: width .3s ease;
+			&::after {
+				position: absolute;
+				content: '';
+				width: 0;
+				background-color: $green;
+				bottom: -10px;
+				left: 0;
+				height: 4px;
+				transform: width .3s ease;
+			}
+			&:hover::after {
+				width: 100%;
+				transition: width 0.3s ease;
+			}
+		}
+}
+
+.spec-category {
+	padding-top: 96px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	margin-bottom: 143px;
+	padding-bottom: 10px;
+	@include breakpoint (md) {
+		overflow-x: scroll;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		margin-bottom: 111px;
+		padding-top: 80px;
+		justify-content: space-between;
+	}
+	@include breakpoint (xs) {
+		gap: 10px;
+	}
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+			width: auto;
+			flex: auto;
+		}
+
+		&__img {
+			width: 127.4px;
+			height: 127.4px;
+		}
+
+		&__name {
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 26px;
+			text-align: center;
+			color: $green;
+		}
+
+		&__text {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			width: 100%;
+			max-width: 216px;
+			min-width: 172px;
+			text-align: center;
+		}
+}
+
+
+.mixitup-control-active {
+	font-weight: 700;
+	color: $green;
+	position: relative;
+	&::after {
+		width: 0;
+		content: '';
+		position: absolute;
+		background-color: $green;
+		bottom: -10px;
+		left: 0;
+		height: 4px;
+		width: 100%;
+		transform: width .3s ease;
+	}
+	&:hover::after {
+		width: 100%;
+		transform: width .3s ease;
+	}
+}
