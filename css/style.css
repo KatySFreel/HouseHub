@@ -1780,6 +1780,17 @@ body {
   }
 }
 
+.spec {
+  margin-bottom: 96px;
+}
+.spec__wrapper {
+  margin-bottom: 143px;
+}
+@media (max-width: 767px) {
+  .spec__wrapper {
+    margin-bottom: 111px;
+  }
+}
 .spec__title {
   margin-bottom: 96px;
 }
@@ -1832,7 +1843,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  margin-bottom: 143px;
   padding-bottom: 10px;
 }
 @media (max-width: 767px) {
@@ -1840,7 +1850,6 @@ body {
     overflow-x: scroll;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    margin-bottom: 111px;
     padding-top: 80px;
     justify-content: space-between;
   }
