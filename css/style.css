@@ -593,12 +593,7 @@ body {
 }
 
 .main {
-  padding-top: 206px;
-}
-@media (max-width: 992px) {
-  .main {
-    padding-top: 123.6px;
-  }
+  padding-top: 40px;
 }
 
 .fancybox__backdrop {
@@ -617,8 +612,6 @@ body {
 .header {
   background: #fff;
   width: 100%;
-  position: fixed;
-  top: 0;
   transition: top 0.3s ease;
   padding-top: 18px;
   z-index: 100;
@@ -1840,14 +1833,14 @@ body {
 
 .spec-category {
   padding-top: 96px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding-bottom: 10px;
 }
 @media (max-width: 767px) {
   .spec-category {
     overflow-x: scroll;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding-top: 80px;

@@ -1,17 +1,17 @@
 // scroll
-let prevScrollpos = window.pageYOffset;
-let header = document.querySelector("header");
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    header.style.top = "0";
-    header.classList.toggle("shadow");
-  } else {
-    header.style.top = "-210px";
-    header.classList.toggle("shadow");
-  }
-  prevScrollpos = currentScrollPos;
-};
+// let prevScrollpos = window.pageYOffset;
+// let header = document.querySelector("header");
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     header.style.top = "0";
+//     header.classList.toggle("shadow");
+//   } else {
+//     header.style.top = "-210px";
+//     header.classList.toggle("shadow");
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
 
 var mixer = mixitup(".spec__content");
 mixer.filter('.category-el');

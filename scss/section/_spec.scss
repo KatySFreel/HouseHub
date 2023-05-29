@@ -60,12 +60,12 @@
 
 .spec-category {
 	padding-top: 96px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 40px;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
 	padding-bottom: 10px;
 	@include breakpoint (md) {
 		overflow-x: scroll;
+		display: flex;
 		flex-wrap: nowrap;
 		justify-content: flex-start;
 		padding-top: 80px;

@@ -34,10 +34,7 @@ body {
 }
 
 .main {
-	padding-top: 206px;
-	@include breakpoint(lg) {
-		padding-top: calc(206px / 10 * 6)
-	}
+	padding-top: 40px;
 }
 
 .fancybox__backdrop {
