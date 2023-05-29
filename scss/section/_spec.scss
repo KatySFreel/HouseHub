@@ -128,3 +128,22 @@
 		transform: width .3s ease;
 	}
 }
+
+.location__title {
+	margin-bottom: 69px;
+	@include breakpoint(lg) {
+		margin-bottom: 57px;
+	}
+}
+
+
+#locationImg circle {
+	opacity: 0;
+	box-shadow: (0px 4px 5px #36724E);;
+	transition: opacity .3s ease;
+}
+#locationImg {
+	max-width: 100%;
+	height: auto;
+	width: 100%;
+}
