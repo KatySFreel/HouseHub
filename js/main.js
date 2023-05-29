@@ -153,3 +153,37 @@ $('.reviews__menu').slick({
   ]
 });
 
+const faqHeaders = document.querySelectorAll('.ques__content');
+const faqContents = document.querySelectorAll('.ques__answer');
+
+gsap.set(faqContents,{height:0});
+gsap.set(faqContents[0],{maxHeight: 500});
+faqHeaders[0].classList.add('is-active')
+gsap.to(faqHeaders[0],{opacity:1}); //1 авктивный элемент
+gsap.to(faqContents[0],{height: 'auto'}); //1 авктивный элемент
+
+faqHeaders.forEach((faqHeader)=>{
+	faqHeader.addEventListener('click',function(){
+		let faqContent = faqHeader.nextElementSibling;
+		if(faqHeader.classList.contains('is-active')){
+      gsap.to(faqContent,{height:0});
+      gsap.to(faqContent,{opacity:0});
+			faqHeader.classList.remove('is-active');
+		}else{
+			const activeHeader = document.querySelector('.ques__content.is-active');
+      faqContent.style.opacity = '1';
+			let delay = 0;
+			if(activeHeader) {
+				gsap.to(activeHeader.nextElementSibling,{height:0});
+				activeHeader.classList.remove('is-active');
+        faqContent.style.opacity = '1';
+				delay= .5;
+			}
+			gsap.timeline()
+			.to(faqContent,{maxHeight:'500',height:'auto', delay:delay})
+			.add(()=>{
+				faqHeader.classList.add('is-active')},'-=.5')
+		}
+	});
+});
+
