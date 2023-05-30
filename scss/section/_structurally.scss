@@ -39,6 +39,7 @@
 		}
 	}
 	&__gif {
+		width: 100%;
 		@include breakpoint (lg) {
 			margin-top: 37px;
 		} 		
@@ -49,7 +50,6 @@
 				width: 100%;
 			}
 			@include breakpoint(xs) {
-				width: 217px;
 				height: 194px;
 			}
 		}

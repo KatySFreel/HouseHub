@@ -195,3 +195,9 @@
 		}
 	}
 }
+
+.btn {
+	@include breakpoint(xxs) {
+		max-width: 100%;
+	}
+}

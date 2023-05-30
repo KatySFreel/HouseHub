@@ -1,6 +1,6 @@
 .reviews {
 	padding-bottom: 59px;
-	@include breakpoint (lg) {
+	@include breakpoint (md) {
 		padding-bottom: 274px;
 	}
 	&__title {

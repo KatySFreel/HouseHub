@@ -6,16 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function burgerMenu(selector) {
     let menu = $(selector);
-    let button = menu.find(".burger-menu_button", ".burger-menu_lines");
-    let lines = menu.find(".burger-menu_lines");
-    let links = menu.find(".burger-menu_link");
-    let overlay = menu.find(".burger-menu_overlay");
+    let button = menu.find(".burger__button", ".burger__lines");
+    let lines = menu.find(".burger__lines");
+    let links = menu.find(".burger_link");
+    let overlay = menu.find(".burger_overlay");
 
     button.on("click", (e) => {
       e.preventDefault();
       toggleMenu();
 
-      lines.toggleClass("burger-menu-write");
+      lines.toggleClass("burger-write");
       $("body").toggleClass("overflow");
     });
 
@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.on("click", () => toggleMenu());
 
     function toggleMenu() {
-      menu.toggleClass("burger-menu_active");
+      menu.toggleClass("burger-active");
     }
   }
 
-  burgerMenu(".burger-menu");
+  burgerMenu(".burger");
 
   AOS.init();
 
@@ -120,19 +120,69 @@ document.addEventListener("DOMContentLoaded", function () {
   var acc = document.getElementsByClassName("accordion");
   var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
     });
-}
+  }
 
-  new Vivus("line", { type: "oneByOne", duration: 200, inViewport: true });
+  new Vivus("technologies__img", { type: "oneByOne", duration: 200, inViewport: true });
 
-  new Vivus("gif", { type: "oneByOne", duration: 200, inViewport: true });
+  new Vivus("structurally__gif", {
+    type: "oneByOne",
+    duration: 200,
+    inViewport: true,
+  });
+
+  const btns = document.querySelectorAll(".home__btns button");
+  const housePaths = document.querySelectorAll(".house img");
+  const houseWB = document.querySelector('.house img[data-path="wb"]');
+
+  btns.forEach((btn) => {
+    ["mouseenter", "touchstart"].forEach((evnt) => {
+      btn.addEventListener(evnt, (e) => {
+        const target = e.target;
+        houseWB.style.zIndex = 1;
+        houseWB.style.opacity = 1;
+
+        showPath(target.dataset.path);
+      });
+    });
+  });
+
+  btns.forEach((btn) => {
+    ["mouseleave", "touchend"].forEach((evnt) => {
+      btn.addEventListener(evnt, () => {
+        resetHouse();
+      });
+    });
+  });
+
+  const showPath = (pathName) => {
+    housePaths.forEach((item) => {
+      if (item.dataset.path == pathName) {
+        item.style.zIndex = 2;
+        item.style.opacity = 1;
+      }
+    });
+  };
+
+  const resetHouse = () => {
+    houseWB.style.zIndex = 0;
+    houseWB.style.opacity = 0;
+
+    housePaths.forEach((path) => {
+      if (path.dataset.path !== "colored" && path.dataset.path !== "wb") {
+        console.log(path.dataset.path);
+        path.style.zIndex = 0;
+        path.style.opacity = 0;
+      }
+    });
+  };
 });
