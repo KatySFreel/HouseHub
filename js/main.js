@@ -177,7 +177,7 @@ new Vivus("my-div", {
   duration: 300,
   type: "oneByOne",
   inViewport: true,
-  file: "../img/noh/wires.svg",
+  file: "./img/noh/wires.svg",
 });
 
 
