@@ -208,6 +208,18 @@
 							<a href="" class="header-menu__link">
 								<img src="img/header/array.svg" alt="">
 							</a>
+							<ul class="header-mobile-menu mobile-menu">
+								<li class="header-menu__item">
+									<a href="" class="header-menu__link">
+										Отделка дома
+									</a>
+								</li>
+								<li class="header-menu__item">
+									<a href="" class="header-menu__link">
+										Сауны и бани
+									</a>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</div>
@@ -307,7 +319,7 @@
 						<img src="img/form/i-3.svg" alt="">
 						<div class="form__item-content">
 							<label for="text">Комментарий</label>
-							<textarea type="text" id="text" name="text" placeholder="Какой у Вас вопрос?"></textarea>
+							<textarea type="text" id="text" name="text" placeholder="Какой у Вас вопрос?" autocomplete="off"></textarea>
 						</div>
 					</div>
 					<p class="form__text">
@@ -1049,7 +1061,7 @@
 									<img src="img/form/i-3.svg" alt="">
 									<div class="form__item-content">
 										<label for="text">Комментарий</label>
-										<textarea id="text" type="text" name="text" placeholder="Какой у Вас вопрос?"></textarea>
+										<textarea id="text" type="text" name="text" placeholder="Какой у Вас вопрос?" autocomplete="off"></textarea>
 									</div>
 								</div>
 								<p class="form__text">
@@ -3792,8 +3804,9 @@
 						<li class="review">
 							<div class="review__item">
 								<div class="vidio">
-									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img alt="" width="200"
+									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img class="preview" alt="" width="200"
 											src="img/reviews/video-pr.png">
+											<span> <img src="./img/reviews/video-btn.png" alt=""></span>
 									</a>
 								</div>
 								<div class="review__content">
@@ -3810,48 +3823,9 @@
 							</div>
 							<div class="review__item">
 								<div class="vidio">
-									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img alt="" width="200"
+									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img class="preview" alt="" width="200"
 											src="img/reviews/video-pr.png">
-										<span class="vidio__btn"></span>
-									</a>
-								</div>
-								<div class="review__content">
-									<img src="img/spec/1.jpg" alt="" class="review__img">
-									<div class="review__inner">
-										<p class="review__name">
-											Иван Иванов
-										</p>
-										<p class="review__text">
-											Люберцы, Московская область.
-										</p>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="review">
-							<div class="review__item">
-								<div class="vidio">
-									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img alt="" width="200"
-											src="img/reviews/video-pr.png">
-									</a>
-								</div>
-								<div class="review__content">
-									<img src="img/spec/1.jpg" alt="" class="review__img">
-									<div class="review__inner">
-										<p class="review__name">
-											Иван Иванов
-										</p>
-										<p class="review__text">
-											Люберцы, Московская область.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="review__item">
-								<div class="vidio">
-									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img alt="" width="200"
-											src="img/reviews/video-pr.png">
-										<span class="vidio__btn"></span>
+											<span> <img src="./img/reviews/video-btn.png" alt=""></span>
 									</a>
 								</div>
 								<div class="review__content">
@@ -3870,8 +3844,9 @@
 						<li class="review">
 							<div class="review__item">
 								<div class="vidio">
-									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img alt="" width="200"
+									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img class="preview" alt="" width="200"
 											src="img/reviews/video-pr.png">
+											<span> <img src="./img/reviews/video-btn.png" alt=""></span>
 									</a>
 								</div>
 								<div class="review__content">
@@ -3888,9 +3863,49 @@
 							</div>
 							<div class="review__item">
 								<div class="vidio">
-									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img alt="" width="200"
+									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img class="preview" alt="" width="200"
 											src="img/reviews/video-pr.png">
-										<span class="vidio__btn"></span>
+											<span> <img src="./img/reviews/video-btn.png" alt=""></span>
+									</a>
+								</div>
+								<div class="review__content">
+									<img src="img/spec/1.jpg" alt="" class="review__img">
+									<div class="review__inner">
+										<p class="review__name">
+											Иван Иванов
+										</p>
+										<p class="review__text">
+											Люберцы, Московская область.
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="review">
+							<div class="review__item">
+								<div class="vidio">
+									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img class="preview" alt="" width="200"
+											src="img/reviews/video-pr.png">
+											<span> <img src="./img/reviews/video-btn.png" alt=""></span>
+									</a>
+								</div>
+								<div class="review__content">
+									<img src="img/spec/1.jpg" alt="" class="review__img">
+									<div class="review__inner">
+										<p class="review__name">
+											Иван Иванов
+										</p>
+										<p class="review__text">
+											Люберцы, Московская область.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="review__item">
+								<div class="vidio">
+									<a href="img/reviews/video.mp4" data-fancybox="video-gallery"><img class="preview" alt="" width="200"
+											src="img/reviews/video-pr.png">
+											<span> <img src="./img/reviews/video-btn.png" alt=""></span>
 									</a>
 								</div>
 								<div class="review__content">
@@ -3933,7 +3948,7 @@
 									<img src="img/form/i-3.svg" alt="">
 									<div class="form__item-content">
 										<label for="text">Комментарий</label>
-										<textarea id="text" type="text" name="text" placeholder="Какой у Вас вопрос?"></textarea>
+										<textarea id="text" type="text" name="text" placeholder="Какой у Вас вопрос?" autocomplete="off"></textarea>
 									</div>
 								</div>
 								<p class="form__text">

@@ -440,7 +440,6 @@ aside {
 
 html,
 body {
-  height: 100%;
   width: 100%;
   font-size: 100%;
   display: flex;
@@ -520,7 +519,7 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #333333;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 .container {
@@ -861,9 +860,35 @@ body {
 }
 .header-bottom .header-menu .array {
   display: none;
+  position: relative;
 }
 @media (max-width: 1124px) {
   .header-bottom .header-menu .array {
+    display: block;
+  }
+}
+.header-bottom .header-menu .array .mobile-menu {
+  display: none;
+}
+.header-bottom .header-menu .array:hover .mobile-menu {
+  position: absolute;
+  display: block;
+  padding: 30px 20px;
+  right: 0;
+  top: 30px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 1px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+.header-bottom .header-menu .array:hover .mobile-menu .header-menu__item {
+  padding: 5px;
+}
+.header-bottom .header-menu .array:hover .mobile-menu .header-menu__item:nth-child(1) {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .header-bottom .header-menu .array:hover .mobile-menu .header-menu__item:nth-child(1) {
     display: block;
   }
 }
@@ -1678,7 +1703,7 @@ body {
   min-height: 24px;
   max-height: 50px;
 }
-.form__item-content input:-webkit-autofill, .form__item-content textarea:-webkit-autofill {
+.form__item-content input:-webkit-autofill {
   -webkit-transition: all 5000s ease-in-out;
   transition: all 5000s ease-in-out;
 }
@@ -2126,22 +2151,22 @@ body {
 }
 
 .vidio a {
+  display: inline-block;
   position: relative;
 }
-.vidio a::after {
-  position: absolute;
-  content: url(../img/reviews/video-btn.png);
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%);
-}
-.vidio a img {
+.vidio a .preview {
   display: block;
   border-radius: 30px;
   width: 100%;
   max-width: 387px;
   max-height: 100%;
   max-height: 237px;
+}
+.vidio a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .questions {

@@ -73,21 +73,21 @@
 }
 .vidio {
 	a {
+		display: inline-block;
 		position: relative;
-		&::after {
-			position: absolute;
-			content: url(../img/reviews/video-btn.png);
-			top: 25%;
-			left: 50%;
-			transform: translate(-50%);
-		}
-		img {
+		.preview {
 			display: block;
 			border-radius: 30px;
 			width: 100%;
 			max-width: 387px;
 			max-height: 100%;
 			max-height: 237px;
+		}
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		} 
 	}
 }
