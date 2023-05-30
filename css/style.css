@@ -2271,8 +2271,8 @@ body {
   top: 47%;
   left: 50%;
   opacity: 0;
-  transform: translateX(0%) rotate(0deg);
-  transition: transform opacity 0.3s ease;
+  transform: translateX(-50%) rotate(190deg);
+  transition: all 0.3s ease;
 }
 @media (max-width: 767px) {
   .ques__btn::before {
@@ -2315,7 +2315,7 @@ body {
   transform: translateX(-50%) rotate(90deg);
   transform-origin: 50% 50%;
   opacity: 1;
-  transition: opacity transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer {

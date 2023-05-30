@@ -110,8 +110,8 @@
 				top: 47%;
 				left: 50%;
 				opacity: 0;
-				transform: translateX(-0%) rotate(0deg);
-				transition: transform opacity .3s ease;
+				transform: translateX(-50%) rotate(190deg);
+				transition: all .3s ease;
 				@include breakpoint(md) {
 					width: 24.19px;
 					height: 2px;
@@ -153,5 +153,5 @@
 	transform: translateX(-50%) rotate(90deg);
 	transform-origin: 50% 50%;
 	opacity: 1;
-	transition: opacity transform .3s ease;
+	transition: all .3s ease;
 }
