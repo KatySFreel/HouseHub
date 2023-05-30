@@ -1,7 +1,7 @@
 .reviews {
 	padding-bottom: 59px;
 	@include breakpoint (lg) {
-		margin-bottom: 274x;
+		padding-bottom: 274px;
 	}
 	&__title {
 		margin-bottom: 131px;
@@ -76,7 +76,7 @@
 		position: relative;
 		&::after {
 			position: absolute;
-			content: url(/img/reviews/video-btn.png);
+			content: url(../img/reviews/video-btn.png);
 			top: 25%;
 			left: 50%;
 			transform: translate(-50%);

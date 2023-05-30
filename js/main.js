@@ -45,21 +45,6 @@ function burgerMenu(selector) {
 
 burgerMenu(".burger-menu");
 
-new Vivus("my-div", {
-  duration: 300,
-  type: "oneByOne",
-  pathTimingFunction: Vivus.EASE,
-  inViewport: true,
-  file: "img/noh/wires.svg",
-});
-
-const line = new Vivus("line", {
-  type: "oneByOne",
-  duration: 200,
-  inViewport: true,
-  reverseStack: true,
-});
-
 AOS.init();
 
 let btn = document.querySelector(".offer__btn");
@@ -187,3 +172,17 @@ faqHeaders.forEach((faqHeader)=>{
 	});
 });
 
+
+new Vivus("my-div", {
+  duration: 300,
+  type: "oneByOne",
+  inViewport: true,
+  file: "../img/noh/wires.svg",
+});
+
+
+let line = new Vivus("line", {
+  type: "oneByOne",
+  duration: 200,
+  inViewport: true,
+});

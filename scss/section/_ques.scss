@@ -1,9 +1,17 @@
 .questions {
-	margin-bottom: 95.5px;
+	margin-top: 59px;
+	margin-bottom: 191px;
+	@include breakpoint(md) {
+		margin-bottom: 57px;
+		margin-top: 0px;
+	}
 }
 .ques {
 		&__title {
 			margin-bottom: 145px;
+			@include breakpoint(md) {
+				margin-bottom: 82px;
+			}
 		}
 
 		&__menu {

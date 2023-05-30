@@ -12,7 +12,7 @@
 		position: relative;
 		&::after {
 			position: absolute;
-			content: url(/img/form/r.png);
+			content: url(../img/form/r.png);
 			z-index: -1;
 			top: 0;
 			right: -35px;
@@ -22,11 +22,11 @@
 		}
 		&::before {
 			position: absolute;
-			content: url(/img/form/l.png);
+			content: url(../img/form/l.png);
 			z-index: -1;
 			left: -35px;
 			@include breakpoint (md) {
-				content: url(/img/form/l-m.png);
+				content: url(../img/form/l-m.png);
 				top: auto;
 				bottom: -245px;
 				left: 50%;
