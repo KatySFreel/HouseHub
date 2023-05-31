@@ -132,7 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  new Vivus("technologies__img", { type: "oneByOne", duration: 200, inViewport: true });
+  new Vivus("technologies__img", {
+    type: "oneByOne",
+    duration: 200,
+    inViewport: true,
+  });
 
   new Vivus("structurally__gif", {
     type: "oneByOne",
@@ -151,6 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
         houseWB.style.zIndex = 1;
         houseWB.style.opacity = 1;
 
+        activeBtn(target);
+
         showPath(target.dataset.path);
       });
     });
@@ -163,6 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  const activeBtn = (targetBtn) => {
+    btns.forEach((btn) => {
+      if (btn === targetBtn) return;
+
+      btn.classList.add("hide");
+    });
+  };
 
   const showPath = (pathName) => {
     housePaths.forEach((item) => {
@@ -184,10 +198,13 @@ document.addEventListener("DOMContentLoaded", function () {
         path.style.opacity = 0;
       }
     });
+
+    btns.forEach((btn) => {
+      btn.classList.remove("hide");
+    });
   };
 
   $(".array").on("click", () => {
-    $('.mobile-menu').toggleClass('menu-active')
+    $(".mobile-menu").toggleClass("menu-active");
   });
-
 });
