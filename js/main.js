@@ -185,4 +185,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   };
+
+  $(".array").on("click", () => {
+    $('.mobile-menu').toggleClass('menu-active')
+  });
+
 });
