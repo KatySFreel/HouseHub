@@ -4,7 +4,7 @@
 		background-repeat: no-repeat;
 		background-position: right top;
 		background-size: contain;
-		padding-bottom: 18px;
+		margin-bottom: 18px;
 
 		@include breakpoint(lg) {
 			background-size: contain;

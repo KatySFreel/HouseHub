@@ -1,157 +1,174 @@
 .questions {
 	margin-top: 59px;
 	margin-bottom: 191px;
+
 	@include breakpoint(md) {
 		margin-bottom: 57px;
 		margin-top: 0px;
 	}
 }
+
 .ques {
-		&__title {
-			margin-bottom: 145px;
-			@include breakpoint(md) {
-				margin-bottom: 82px;
-			}
-		}
+	&__title {
+		margin-bottom: 145px;
 
-		&__menu {
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			align-items: center;
-			width: 100%;
-			max-width: 949px;
-			margin: 0 auto;
+		@include breakpoint(md) {
+			margin-bottom: 82px;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		width: 100%;
+		max-width: 949px;
+		margin: 0 auto;
+
+		@include breakpoint(lg) {
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		max-width: 699px;
+		align-self: flex-start;
+
+		&:nth-child(2n) {
+			align-self: flex-end;
+
 			@include breakpoint(lg) {
-				gap: 10px;
+				margin-left: 0;
 			}
 		}
+	}
 
-		&__item {
-			width: 100%;
-			max-width: 699px;
-			align-self: flex-start;
-			&:nth-child(2n) {
-				align-self: flex-end;
-				@include breakpoint(lg) {
-					margin-left: 0;
-				}
-			}
+	&__content {
+		width: 100%;
+		max-width: 699px;
+		background-color: $green;
+		padding: 22px 52px;
+		border-radius: 9px;
+		color: $write;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		transition: all .3s ease;
+		cursor: pointer;
+
+		@include breakpoint(lg) {
+			padding: 20px 6px 20px 69px;
 		}
 
-		&__content {
-			width: 100%;
-			max-width: 699px;
-			background-color: $green;
-			padding: 22px 52px;
-			border-radius: 9px;
-			color: $write;
+		@include breakpoint(md) {
+			font-style: normal;
 			font-weight: 700;
-			font-size: 20px;
-			line-height: 30px;
-			display: flex;
-			align-items: center;
-			position: relative;
-			transition: all .3s ease;
-			cursor: pointer;
-			@include breakpoint(lg) {
-				padding: 20px 6px 20px 69px;
-			}
-			@include breakpoint(md) {
-				font-style: normal;
-				font-weight: 700;
-				font-size: 14px;
-				line-height: 120%;
-			}
-			&:hover {
-				box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
-				transition: box-shadow .3s ease;
-			}
+			font-size: 14px;
+			line-height: 120%;
 		}
 
-		&__btn {
-			background-color: $acc-light-gray;
-			width: 60px;
-			height: 60px;
-			border-radius: 100%;
-			position: absolute;
-			left: -38px;
-			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-			cursor: pointer;
-			transition: all .3s ease;
-			@include breakpoint(xlg) {
-				left: -17px;
-			}
-			@include breakpoint(lg) {
-				left: 11px;
-				width: 45px;
-				height: 45px;
-			}
-			&::after {
-				position: absolute;
-				content: '';
-				width: 32.25px;
-				height: 3.58px;
-				background-color: $btn;
-				top: 47%;
-				left: 50%;
-				transform: translate(-50%);
-				@include breakpoint(md) {
-					width: 24.19px;
-					height: 2.69px;
-				}
-			}
-			&::before {
-				position: absolute;
-				content: '';
-				width: 32.25px;
-				height: 3.58px;
-				background-color: $btn;
-				top: 47%;
-				left: 50%;
-				opacity: 0;
-				transform: translateX(-50%) rotate(190deg);
-				transition: all .3s ease;
-				@include breakpoint(md) {
-					width: 24.19px;
-					height: 2px;
-				}
-			}
-			
-		}
-
-		&__answer {
-			display: none;
-			height: 100%;
-		}
-
-		&__answer-text {
-			width: 100%;
-			max-width: 697px;
-			background-color: $acc-light-gray;
-			font-weight: 400;
-			font-size: 20px;
-			line-height: 30px;
-			color: $title;
-			border-radius: 9px;
-			padding: 28px 44px;
-			transition: hidden .3s ease;
+		&:hover {
 			box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
-			@include breakpoint(lg) {
-				padding: 26px 6px 26px 63px;
-			}
+			transition: box-shadow .3s ease;
+		}
+	}
+
+	&__btn {
+		background-color: $acc-light-gray;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		position: absolute;
+		left: -38px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		cursor: pointer;
+		transition: all .3s ease;
+
+		@include breakpoint(xlg) {
+			left: -17px;
+		}
+
+		@include breakpoint(lg) {
+			left: 11px;
+			width: 45px;
+			height: 45px;
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 32.25px;
+			height: 3.58px;
+			background-color: $btn;
+			top: 47%;
+			left: 50%;
+			transform: translate(-50%);
+
 			@include breakpoint(md) {
-				font-weight: 400;
-				font-size: 14px;
-				line-height: 120%;
-				padding: 26px 6px 26px 63px;
+				width: 24.19px;
+				height: 2.69px;
 			}
 		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 32.25px;
+			height: 3.58px;
+			background-color: $btn;
+			top: 47%;
+			left: 50%;
+			transform: translateX(-50%) rotate(90deg);
+			transform-origin: 50% 50%;
+			opacity: 1;
+			transition: all .4s ease;
+
+			@include breakpoint(md) {
+				width: 24.19px;
+				height: 2px;
+			}
+		}
+
+	}
+
+	&__answer {
+		display: none;
+		height: 100%;
+	}
+
+	&__answer-text {
+		width: 100%;
+		max-width: 697px;
+		background-color: $acc-light-gray;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		color: $title;
+		border-radius: 9px;
+		padding: 28px 44px;
+		transition: hidden .3s ease;
+		box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+
+		@include breakpoint(lg) {
+			padding: 26px 6px 26px 63px;
+		}
+
+		@include breakpoint(md) {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 120%;
+			padding: 26px 6px 26px 63px;
+		}
+	}
 }
 
 .active .ques__btn::before {
-	transform: translateX(-50%) rotate(90deg);
-	transform-origin: 50% 50%;
-	opacity: 1;
-	transition: all .3s ease;
+	opacity: 0;
+	transform: translateX(-50%) rotate(290deg);
+	transition: all .4s ease;
 }

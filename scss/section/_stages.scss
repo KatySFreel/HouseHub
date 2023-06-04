@@ -1,14 +1,15 @@
 .stages {
-	padding-top: 65px;
-	padding-bottom: 77px;
+	margin-top: 65px;
+	margin-bottom: 77px;
+
 	@include breakpoint(md) {
-		padding-top: 26px;
-		padding-bottom: 143px;
+		margin-top: 26px;
+		margin-bottom: 143px;
 	}
 
 	&__menu {
 		display: grid;
-		grid-template-areas: 
+		grid-template-areas:
 			"a ."
 			"a b"
 			"a b"
@@ -25,70 +26,119 @@
 			". f";
 		gap: 60px;
 		height: 100%;
+
 		@include breakpoint(lg) {
 			gap: 30px;
 		}
+
 		@include breakpoint(md) {
+			align-items: center;
+			gap: 10px;
+			margin-top: 55px;
+			row-gap: 55px;
+		}
+
+		@include breakpoint(sm) {
+			gap: 10px;
+			row-gap: 55px;
+		}
+
+		@include breakpoint(xs) {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			gap: 50px;
-			margin-top: 55px;
+			gap: 55px;
 		}
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
+
 		@include breakpoint(md) {
 			flex-direction: column;
 		}
+
 		&:nth-child(2n) {
 			justify-content: flex-end;
 		}
+
 		&:nth-child(1) {
 			grid-area: a;
+
 			.text {
 				width: 255px;
+				@include breakpoint(sm) {
+					width: 206px;
+				}
+
+				@include breakpoint(xs) {
+					width: 255px;
+				}
 			}
 		}
+
 		&:nth-child(2) {
 			grid-area: b;
+
 			.text {
 				width: 277px;
+				@include breakpoint(sm) {
+					width: 167px;
+				}
+
+				@include breakpoint(xs) {
+					width: 277px;
+				}
 			}
 		}
+
 		&:nth-child(3) {
 			grid-area: c;
+
 			.text {
 				width: 152px;
 			}
 		}
+
 		&:nth-child(4) {
 			grid-area: d;
+
 			.text {
 				width: 105px;
 			}
 		}
+
 		&:nth-child(5) {
 			grid-area: e;
+
 			.text {
 				width: 150px;
 			}
 		}
+
 		&:nth-child(6) {
 			grid-area: f;
+
 			.text {
 				width: 165px;
 			}
 		}
+
 		img {
+			width: 100%;
 			@include breakpoint(lg) {
-				width: 100%;
 				max-width: 200px;
 			}
+
 			@include breakpoint(md) {
-				width: 100%;
+				max-width: 232px;
+			}
+
+			@include breakpoint(sm) {
+				max-width: 197px;
+			}
+
+			@include breakpoint(xs) {
 				max-width: 232px;
 			}
 		}
@@ -100,27 +150,34 @@
 		align-items: center;
 		justify-content: center;
 	}
+
 	&__text {
 		width: 100%;
 		text-align: center;
 		margin-top: 40px;
+		color: $black;
 	}
+
 	.number {
 		color: $green;
 		font-size: 96px;
 		line-height: 115px;
 		font-weight: 900;
+		margin-bottom: 82px;
+
 		@include breakpoint(lg) {
 			font-size: 70px;
 			line-height: 48px;
 			display: block;
 		}
+
 		@include breakpoint(md) {
 			font-size: 40px;
 			line-height: 48px;
 			display: block;
 			margin-left: 50%;
+			margin-bottom: 0;
 		}
 	}
-	
+
 }

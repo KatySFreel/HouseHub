@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var mixer = mixitup(".spec__content");
-  mixer.filter(".category-el");
-
   // burger
-
   function burgerMenu(selector) {
     let menu = $(selector);
     let button = menu.find(".burger__button", ".burger__lines");
@@ -16,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleMenu();
 
       lines.toggleClass("burger-write");
-      $("body").toggleClass("overflow");
+      $("html").toggleClass("overflow");
     });
 
     links.on("click", () => {
@@ -31,9 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   burgerMenu(".burger");
 
-  AOS.init();
+  // menu
+  $(".array").on("click", () => {
+    $(".mobile-menu").toggleClass("menu-active");
+  });
+
+  // funsybox start
 
   Fancybox.bind([{ src: "#dialog-content", type: "inline" }]);
+  Fancybox.bind("[data-fancybox]", {});
 
   // location
   // Получаем нужный элемент
@@ -94,8 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // А также запустим функцию сразу. А то вдруг, элемент изначально видно
   Visible(element);
 
-  Fancybox.bind("[data-fancybox]", {});
-
+  // slick-slider
   $(".reviews__menu").slick({
     arrows: false,
     slidesToShow: 3,
@@ -132,18 +133,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  new Vivus("technologies__img", {
-    type: "oneByOne",
-    duration: 200,
-    inViewport: true,
-  });
+  // vivus
+  new Vivus(
+    "technologies__img",
+    {
+      type: "oneByOne",
+      duration: 200,
+      inViewport: true,
+    },
+    function (obj) {
+      obj.el.classList.add("finished");
+    }
+  );
 
-  new Vivus("structurally__gif", {
-    type: "oneByOne",
-    duration: 200,
-    inViewport: true,
-  });
+  new Vivus(
+    "structurally__gif",
+    {
+      type: "oneByOne",
+      duration: 200,
+      inViewport: true,
+    },
+    function (obj) {
+      obj.el.classList.add("finished");
+    }
+  );
 
+  // home
   const btns = document.querySelectorAll(".home__btns button");
   const housePaths = document.querySelectorAll(".house img");
   const houseWB = document.querySelector('.house img[data-path="wb"]');
@@ -204,7 +219,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  $(".array").on("click", () => {
-    $(".mobile-menu").toggleClass("menu-active");
-  });
+  // mixitab
+    let mixer = mixitup(".spec__content");
+    mixer.filter(".category-el");
+
+  // aos start
+  AOS.init();
 });

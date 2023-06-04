@@ -8,12 +8,20 @@
 	&__logo {
 		display: block;
 		margin-bottom: 24px;
+		@include breakpoint(840) {
+			flex: auto;
+		}
 
 		img {
 			@include breakpoint(md) {
 				display: block;
 				width: 124px;
 			}
+		}
+	}
+	&__nav {
+		@include breakpoint(840) {
+			display: none;
 		}
 	}
 }
@@ -41,10 +49,6 @@
 
 	@include breakpoint(xlg) {
 		gap: 42px;
-	}
-
-	@include breakpoint(840) {
-		display: none;
 	}
 
 	&__link {
@@ -76,13 +80,17 @@
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 22px;
-
 	&__img {
 		margin-right: 14px;
 
 		@include breakpoint(xlg) {
 			margin-right: 0px;
 		}
+		@include breakpoint(840) {
+			display: block;
+			margin-right: 26px;
+		}
+	
 	}
 
 	span {
@@ -197,11 +205,29 @@
 			padding-top: 40px;
 			font-weight: 700;
 			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 
 	&__menu-link {
 		color: $write;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			width: 0;
+			height: 2px;
+			bottom: -5px;
+			background-color: $write;
+			left: 0;
+			transition: all .3s ease;
+		}
+		&:hover::after {
+			width: 100%;
+			transition: width .3s ease;
+		}
 	}
 }
 

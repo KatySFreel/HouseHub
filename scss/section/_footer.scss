@@ -1,8 +1,9 @@
 .footer {
 	padding-top: 72px;
+	padding-bottom: 46px;
 	background-color: $footer-color;
 	@include breakpoint (md) {
-		padding-top: 25px;
+		padding: 25px 0px;
 	}
 
 	&__wrapper {
@@ -12,8 +13,13 @@
 			"b	d e"
 			"c	d e";
 		height: 100%;
-		gap: 20px;
 		@include breakpoint(lg) {
+			grid-template-areas: 
+			"a a a"
+			"b	b b"
+			"d	e c";
+		}
+		@include breakpoint(md) {
 			grid-template-areas: 
 			"a a a"
 			"e	e e"
@@ -85,7 +91,7 @@
 					display: inline;
 				}
 			}
-			@include breakpoint(lg) {
+			@include breakpoint(md) {
 				flex-wrap: wrap;
 				flex-direction: row;
 				justify-content: center;
@@ -97,9 +103,6 @@
 			display: flex;
 			gap: 55px;
 			align-items: flex-start;
-			@include breakpoint(lg) {
-				align-items: start;
-			}
 		}
 		
 		&:nth-child(5) {
@@ -118,10 +121,15 @@
 				}
 			}
 			@include breakpoint(lg) {
+				// display: flex;
+				// justify-content: space-between;
+			}
+			@include breakpoint(md) {
+				margin: 20px 0px 0px;
 				display: flex;
 				justify-content: space-between;
 			}
-			@include breakpoint(md) {
+			@include breakpoint(sm) {
 				font-weight: 500;
 				font-size: 14px;
 				line-height: 120%;
@@ -141,8 +149,19 @@
 		display: flex;
 		gap: 10px;
 		flex-direction: column;
+		// @include breakpoint(lg) {
+		// 	flex-direction: column;
+		// 	width: 25%;
+		// 	align-items: center;
+		// }
 		@include breakpoint(md) {
 			gap: 4px;
+		}
+	}
+	&__menu-item {
+		margin-bottom: 10px;
+		@include breakpoint(md) {
+			margin-bottom: 4px;
 		}
 	}
 	&__menu-link {
@@ -150,15 +169,29 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 30px;
+		position: relative;
 		color: $footer-text-gray;
 		@include breakpoint(md) {
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 120%;
 		}
-		&:hover {
-			opacity: .7;
-			transition: all .3s ease;
+		transition: color .2s ease;
+
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -4px;
+			width: 0;
+			left: 0;
+			height: 2px;
+			background-color: #005A4D;
+			transition: width .2s ease;
+		}
+
+		&:hover::after {
+			width: 100%;
+			transition: width .2s ease;
 		}
 	}
 

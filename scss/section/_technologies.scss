@@ -1,9 +1,9 @@
 .technologies {
-	padding-top: 91px;
-	padding-bottom: 65px;
+	margin-top: 91px;
+	margin-bottom: 65px;
 	@include breakpoint(md) {
-		padding-top: 49px;
-		padding-bottom: 26px;
+		margin-top: 49px;
+		margin-bottom: 26px;
 	}
 	
 	&__title {

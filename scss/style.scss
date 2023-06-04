@@ -52,6 +52,15 @@ body {
 }
 
 
+#technologies__img *, #structurally__gif * {
+	fill-opacity: 0;
+}
+
+#technologies__img.finished * , #structurally__gif.finished *{
+	fill-opacity: 1;
+	transition: fill-opacity .5s;
+}
+
 @import "./section/header";
 @import "./section/offer";
 @import "./section/structurally";

@@ -1,11 +1,14 @@
 .reviews {
-	padding-bottom: 59px;
+	margin-bottom: 59px;
+
 	@include breakpoint (md) {
-		padding-bottom: 274px;
+		margin-bottom: 274px;
 	}
+
 	&__title {
 		margin-bottom: 131px;
 		max-width: 439px;
+
 		@include breakpoint (md) {
 			margin-bottom: 122px;
 		}
@@ -15,10 +18,12 @@
 		width: 100%;
 		margin-bottom: 49px;
 	}
+
 	&__btn {
 		margin: 75px auto 0px;
 		width: 100%;
 		max-width: 267px;
+
 		@include breakpoint (md) {
 			margin: 57px auto 0px;
 		}
@@ -29,16 +34,19 @@
 	&__item {
 		&:nth-child(1) {
 			margin-bottom: 42px;
+
 			@include breakpoint(md) {
 				margin-bottom: 57px;
 			}
 		}
+
 		padding: 0px 10px;
+
 		@include breakpoint(xs) {
 			padding: 0;
 		}
 	}
-	
+
 	&__content {
 		display: flex;
 		align-items: center;
@@ -71,10 +79,24 @@
 		max-width: 192px;
 	}
 }
+
 .vidio {
+	border-radius: 30px;
+	transition: all 0.5s ease;
+	overflow: hidden;
+	transition: all 0.5s ease;
+
 	a {
 		display: inline-block;
 		position: relative;
+		border-radius: 30px;
+		transition: all 0.5s ease;
+
+		&:hover {
+			-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+			animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+		}
+
 		.preview {
 			display: block;
 			border-radius: 30px;
@@ -83,12 +105,37 @@
 			max-height: 100%;
 			max-height: 237px;
 		}
+
 		span {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-		} 
+		}
+
 	}
 }
 
+@-webkit-keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	100% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+
+@keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	100% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}

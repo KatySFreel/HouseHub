@@ -1,8 +1,8 @@
 .services {
-padding-top: 66px;
-padding-bottom: 91px;
+	margin-top: 66px;
+	margin-bottom: 91px;
 @include breakpoint(md) {
-	padding-bottom: 49px;
+	margin-bottom: 49px;
 }
 
 	&__title {

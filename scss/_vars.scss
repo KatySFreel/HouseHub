@@ -14,15 +14,19 @@ $btn: #4F4F4F;
 	background: $green;
 	color: $write;
 	text-align: center;
-	padding: 19px 15px;
+	padding: 18px 14px;
 	display: block;
 	border-radius: 10px;
 	font-size: 18px;
+	border: 2px solid transparent;
 	line-height: 22px;
 	letter-spacing: 0.02em;
 	transition: all .3s ease;
 	cursor: pointer;
 	&:hover {
+		background: $write;
+		color: $green;
+		border: 2px solid $green;
 		transition: all .3s ease;
 	}
 	@include breakpoint (xs) {

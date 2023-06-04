@@ -1,9 +1,9 @@
 .pos {
-	padding-top: 77px;
-	padding-bottom: 64px;
+	margin-top: 77px;
+	margin-bottom: 64px;
 	@include breakpoint(lg) {
-		padding-top: 143px;
-		padding-bottom: 39px;
+		margin-top: 143px;
+		margin-bottom: 39px;
 	}
 
 	&__title {
