@@ -3,36 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
 
   // burger
-  function burgerMenu(selector) {
-    let menu = $(selector);
-    let button = menu.find(".burger__button", ".burger__lines");
-    let lines = menu.find(".burger__lines");
-    let links = menu.find(".burger_link");
-    let overlay = menu.find(".burger_overlay");
 
-    button.on("click", (e) => {
-      e.preventDefault();
-      toggleMenu();
+  const btnBurger = document.querySelector(".menu");
+  const html = document.querySelector("html");
+  const mobMenu = document.querySelector(".mobile-menu");
+  const burgerWrap = document.querySelector(".burger");
 
-      lines.toggleClass("burger-write");
-      $("html").toggleClass("overflow");
-    });
-
-    links.on("click", () => {
-      toggleMenu();
-    });
-    overlay.on("click", () => toggleMenu());
-
-    function toggleMenu() {
-      menu.toggleClass("burger-active");
-    }
-  }
-
-  burgerMenu(".burger");
-
-  // menu
-  $(".array").on("click", () => {
-    $(".mobile-menu").toggleClass("menu-active");
+  btnBurger.addEventListener("click", (e) => {
+    btnBurger.classList.toggle("active");
+    html.classList.toggle("overflow");
+    mobMenu.classList.toggle("menu-active");
+    burgerWrap.classList.toggle("burger-active");
   });
 
   // funsybox start
@@ -128,13 +109,31 @@ document.addEventListener("DOMContentLoaded", function () {
     acc[i].addEventListener("click", function () {
       this.classList.toggle("active");
       let panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
+      if (panel.classList.contains("active")) {
+        panel.classList.remove("active");
       } else {
-        panel.style.display = "block";
+        panel.classList.add("active");
       }
     });
   }
+
+  // scroll-btn
+  let scrollTimer;
+  const scrollBnt = document.querySelector(".scroll-btn");
+
+  window.addEventListener("scroll", function () {
+    clearTimeout(scrollTimer);
+    if(pageYOffset > 500) {
+      clearTimeout(scrollTimer);
+      scrollBnt.classList.remove("active");
+  
+      scrollTimer = setTimeout(function () {
+          scrollBnt.classList.add("active");
+      }, 500);
+    }
+
+
+  });
 
   // vivus
   new Vivus(

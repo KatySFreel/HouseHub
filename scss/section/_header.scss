@@ -114,58 +114,10 @@
 .burger {
 	display: none;
 	width: 33px;
+	cursor: pointer;
 
 	@include breakpoint(xlg) {
 		display: block;
-	}
-
-	&__button {
-		z-index: 40;
-		width: 100%;
-		height: 100%;
-		display: block;
-		-webkit-transition: 0.4s;
-		-moz-transition: 0.4s;
-		-o-transition: 0.4s;
-		transition: 0.4s;
-		position: relative;
-
-		&:hover &__lines {
-			filter: brightness(0.7);
-		}
-	}
-
-	&__lines {
-		display: block;
-		width: 100%;
-		height: 3px;
-		background-color: #000000;
-		position: relative;
-
-		&::before,
-		&::after,
-		&__lines {
-			position: absolute;
-			right: 0;
-			width: 33px;
-			height: 3px;
-			background-color: #000000;
-			-webkit-transition: 0.4s;
-			-moz-transition: 0.4s;
-			-o-transition: 0.4s;
-			transition: 0.4s;
-			z-index: 1;
-		}
-
-		&::before {
-			content: '';
-			top: -7px;
-		}
-
-		&::after {
-			content: '';
-			top: 7px;
-		}
 	}
 
 	&__nav {
@@ -187,14 +139,17 @@
 
 	&__menu-item {
 		padding: 10px 34px;
-		color: $write;
+		color: $white;
 		font-family: 'Roboto', sans-serif;
 		font-size: 16px;
 		text-decoration: none;
 		font-weight: 400;
 
 		&:first-child {
-			color: $write;
+			color: $white;
+			a::after {
+				display: none !important;
+			}
 		}
 
 		&:hover {
@@ -212,7 +167,7 @@
 	}
 
 	&__menu-link {
-		color: $write;
+		color: $white;
 		position: relative;
 		&::after {
 			position: absolute;
@@ -220,7 +175,7 @@
 			width: 0;
 			height: 2px;
 			bottom: -5px;
-			background-color: $write;
+			background-color: $white;
 			left: 0;
 			transition: all .3s ease;
 		}
@@ -233,13 +188,6 @@
 
 .overflow {
 	overflow-y: hidden;
-}
-
-.burger-write::before,
-.burger-write::after,
-.burger-write {
-	background-color: $write;
-	opacity: 1;
 }
 
 .burger-active .burger__lines {
@@ -262,7 +210,7 @@
 	-moz-transition: 0.4s;
 	-o-transition: 0.4s;
 	transition: 0.4s;
-	color: $write;
+	color: $white;
 	overflow-y: auto;
 }
 
@@ -285,7 +233,7 @@
 .header-bottom {
 	border-top: 1px solid #000000;
 	padding-top: 27px;
-	background: $write;
+	background: $white;
 	padding-bottom: 43px;
 	position: relative;
 	z-index: 10;
@@ -324,7 +272,7 @@
 				top: 20px;
 				z-index: -1;
 				border-radius: 30px;
-				background-color: $write;
+				background-color: $white;
 				box-shadow: 1px 4px rgba(0, 0, 0, 0.25);
 				opacity: 0;
 				transform: translateY(-10px);
@@ -353,5 +301,72 @@
 
 	@include breakpoint(lg) {
 		display: none;
+	}
+}
+
+
+.menu {
+	--color: #005A4D;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	position: relative;
+	border: none;
+	background: none;
+	cursor: pointer;
+	-webkit-appearence: none;
+	-webkit-tap-highlight-color: transparent;
+	z-index: 1000;
+	svg {
+		 width: 64px;
+		 height: 48px;
+		 top: -6px;
+		 left: -14px;
+		 stroke: var(--color);
+		 stroke-width: 3px;
+		 stroke-linecap: round;
+		 stroke-linejoin: round;
+		 fill: none;
+		 display: block;
+		 position: absolute;
+		 path {
+			  transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+			  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+			  stroke-dashoffset: var(--offset, 126px);
+			  transform: translateZ(0);
+			  &:nth-child(2) {
+					--duration: .7s;
+					--easing: ease-in;
+					--offset: 100px;
+					--array-2: 74px;
+			  }
+			  &:nth-child(3) {
+					--offset: 133px;
+					--array-2: 107px;
+			  }
+		 }
+	}
+	&.active {
+		--color: #fff;
+		 svg {
+			  path {
+					--offset: 57px;
+					&:nth-child(1),
+					&:nth-child(3) {
+						 --delay: .15s;
+						 --easing: cubic-bezier(.2, .4, .2, 1.1);
+					}
+					&:nth-child(2) {
+						 --duration: .4s;
+						 --offset: 2px;
+						 --array-1: 1px;
+					}
+					&:nth-child(3) {
+						 --offset: 58px;
+					}
+			  }
+		 }
 	}
 }

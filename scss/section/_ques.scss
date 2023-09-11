@@ -51,7 +51,7 @@
 		background-color: $green;
 		padding: 22px 52px;
 		border-radius: 9px;
-		color: $write;
+		color: $white;
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 30px;
@@ -59,6 +59,7 @@
 		align-items: center;
 		position: relative;
 		transition: all .3s ease;
+		z-index: 2;
 		cursor: pointer;
 
 		@include breakpoint(lg) {
@@ -137,8 +138,12 @@
 	}
 
 	&__answer {
-		display: none;
-		height: 100%;
+		position: relative;
+		z-index: -3;
+		height: 0;
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: all .1s ease-in;
 	}
 
 	&__answer-text {
@@ -172,3 +177,11 @@
 	transform: translateX(-50%) rotate(290deg);
 	transition: all .4s ease;
 }
+
+.active.ques__answer {
+		z-index: 1;
+		height: 100%;
+		opacity: 1;
+		transform: translateY(0px);
+		transition: all .3s ease;
+	}

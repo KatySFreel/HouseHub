@@ -1,5 +1,5 @@
 $green: #005A4D;
-$write: #ffffff;
+$white: #ffffff;
 $black: #000000;
 $green-light: #6AC1AC;
 $footer-color: #F8F8F8;
@@ -12,7 +12,7 @@ $btn: #4F4F4F;
 
 @mixin btn {
 	background: $green;
-	color: $write;
+	color: $white;
 	text-align: center;
 	padding: 18px 14px;
 	display: block;
@@ -24,7 +24,7 @@ $btn: #4F4F4F;
 	transition: all .3s ease;
 	cursor: pointer;
 	&:hover {
-		background: $write;
+		background: $white;
 		color: $green;
 		border: 2px solid $green;
 		transition: all .3s ease;
