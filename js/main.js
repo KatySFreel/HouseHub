@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     housePaths.forEach((path) => {
       if (path.dataset.path !== "colored" && path.dataset.path !== "wb") {
-        console.log(path.dataset.path);
         path.style.zIndex = 0;
         path.style.opacity = 0;
       }
