@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // aos start
+  AOS.init();
+
   // burger
   function burgerMenu(selector) {
     let menu = $(selector);
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // location
   // Получаем нужный элемент
-  var element = document.querySelector("#location");
+  let element = document.querySelector("#location");
 
   function visibleCircle(index, maxindex, elem) {
     if (index < maxindex) {
@@ -50,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       return setTimeout(
         () => visibleCircle(index++, maxindex, elem),
-        getRandomArbitrary(20, 70)
+        getRandomArbitrary(20, 70),
       );
     }
 
@@ -58,13 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   locationStart = () => {
-    var svgElement = document.querySelector("#locationImg");
-    var circleElements = svgElement.querySelectorAll("circle");
+    let svgElement = document.querySelector("#locationImg");
+    let circleElements = svgElement.querySelectorAll("circle");
     visibleCircle(0, circleElements.length, circleElements);
   };
 
-  var Visible = function (target) {
-    var targetPosition = {
+  let Visible = function (target) {
+    let targetPosition = {
         top: window.pageYOffset + target.getBoundingClientRect().top,
         left: window.pageXOffset + target.getBoundingClientRect().left,
         right: window.pageXOffset + target.getBoundingClientRect().right,
@@ -118,13 +121,13 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   });
 
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+  let acc = document.getElementsByClassName("accordion");
+  let i;
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
       this.classList.toggle("active");
-      var panel = this.nextElementSibling;
+      let panel = this.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
@@ -143,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     function (obj) {
       obj.el.classList.add("finished");
-    }
+    },
   );
 
   new Vivus(
@@ -155,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     function (obj) {
       obj.el.classList.add("finished");
-    }
+    },
   );
 
   // home
@@ -220,9 +223,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // mixitab
-    let mixer = mixitup(".spec__content");
-    mixer.filter(".category-el");
-
-  // aos start
-  AOS.init();
+  let mixer = mixitup(".spec__content");
+  mixer.filter(".category-el");
 });

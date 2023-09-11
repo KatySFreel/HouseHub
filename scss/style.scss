@@ -15,6 +15,22 @@ body {
 	overflow-x: hidden;
 }
 
+// scroll
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+	background: $acc-light-gray;
+	border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $green;
+	border-radius: 8px;
+	border: 8px solid $green;
+}
+
 .container {
 	width: 100%;
 	max-width: 1230px;
