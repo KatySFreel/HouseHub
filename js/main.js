@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     clearTimeout(scrollTimer);
-    if(pageYOffset > 500) {
+    if(pageYOffset > 700) {
       clearTimeout(scrollTimer);
       scrollBnt.classList.remove("active");
   
