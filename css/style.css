@@ -530,6 +530,22 @@ h6 {
   line-height: 0;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #005A4D inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -2069,6 +2085,8 @@ body::-webkit-scrollbar-thumb {
   color: rgba(255, 255, 255, 0.72);
   background: #005A4D;
   width: 100%;
+  -webkit-appearance: none;
+          appearance: none;
 }
 .form__item-content input::-moz-placeholder {
   display: block;
@@ -2078,6 +2096,8 @@ body::-webkit-scrollbar-thumb {
   color: rgba(255, 255, 255, 0.72);
   background: #005A4D;
   width: 100%;
+  -moz-appearance: none;
+       appearance: none;
 }
 .form__item-content input:-ms-input-placeholder {
   display: block;
@@ -2087,6 +2107,7 @@ body::-webkit-scrollbar-thumb {
   color: rgba(255, 255, 255, 0.72);
   background: #005A4D;
   width: 100%;
+  appearance: none;
 }
 .form__item-content input::-ms-input-placeholder {
   display: block;
@@ -2096,6 +2117,7 @@ body::-webkit-scrollbar-thumb {
   color: rgba(255, 255, 255, 0.72);
   background: #005A4D;
   width: 100%;
+  appearance: none;
 }
 .form__item-content input, .form__item-content input::placeholder {
   display: block;
@@ -2105,6 +2127,9 @@ body::-webkit-scrollbar-thumb {
   color: rgba(255, 255, 255, 0.72);
   background: #005A4D;
   width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .form__item-content textarea::-webkit-input-placeholder {
   display: block;
@@ -2116,6 +2141,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   max-height: 75px;
+  -webkit-appearance: none;
+          appearance: none;
   resize: none;
 }
 .form__item-content textarea::-moz-placeholder {
@@ -2128,6 +2155,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   max-height: 75px;
+  -moz-appearance: none;
+       appearance: none;
   resize: none;
 }
 .form__item-content textarea:-ms-input-placeholder {
@@ -2140,6 +2169,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   max-height: 75px;
+  appearance: none;
   resize: none;
 }
 .form__item-content textarea::-ms-input-placeholder {
@@ -2152,6 +2182,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   max-height: 75px;
+  appearance: none;
   resize: none;
 }
 .form__item-content textarea, .form__item-content textarea::placeholder {
@@ -2164,11 +2195,10 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   max-height: 75px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   resize: none;
-}
-.form__item-content input:-webkit-autofill {
-  -webkit-transition: all 5000s ease-in-out;
-  transition: all 5000s ease-in-out;
 }
 .form__text {
   margin-top: 6px;
