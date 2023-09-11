@@ -116,3 +116,26 @@ select:-webkit-autofill:focus {
 	-webkit-box-shadow: 0 0 0px 1000px $green inset;
 	transition: background-color 5000s ease-in-out 0s;
 }
+
+html,
+body {
+	overflow: auto;
+	scrollbar-gutter: auto;
+}
+
+
+// scroll
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+	background: $acc-light-gray;
+	border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $green;
+	border-radius: 8px;
+	border: 8px solid $green;
+}

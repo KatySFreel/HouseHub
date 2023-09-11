@@ -546,16 +546,10 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-html {
-  overflow-x: hidden;
-}
-
+html,
 body {
-  font-family: "Roboro Flex", sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-  color: #333333;
-  overflow-x: hidden;
+  overflow: auto;
+  scrollbar-gutter: auto;
 }
 
 body::-webkit-scrollbar {
@@ -571,6 +565,18 @@ body::-webkit-scrollbar-thumb {
   background-color: #005A4D;
   border-radius: 8px;
   border: 8px solid #005A4D;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboro Flex", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  overflow-x: hidden;
 }
 
 .container {
@@ -989,7 +995,6 @@ body::-webkit-scrollbar-thumb {
   background: #ffffff;
   padding-bottom: 43px;
   position: relative;
-  z-index: 10;
 }
 .header-bottom .header-menu {
   -webkit-box-pack: center;
